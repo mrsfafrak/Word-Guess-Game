@@ -6,15 +6,15 @@ var winsText = document.getElementById("wins-text");
 winsText.textContent = wins;
 var lossesText = document.getElementById("losses-text");
 lossesText.textContent = losses;
-
+ // code for button to get new game started
 var newGame = document.getElementById("new-game");
 newGame.onclick = function () {
     // logs number of guesses intially
     var guessLeft = document.getElementById("guess-left");
-    var guesses = 10;
+    var guesses = 12;
     guessLeft.textContent = guesses;
     // Picks an animal for player to guess in game
-    var computerChoices = ["cat", "dog", "cow", "ferret", "pig", "parrot", "elephant", "monkey", "gazelle", "mouse"];
+    var computerChoices = ["cat", "dog", "cow", "lion", "rhino","ferret", "pig", "parrot", "elephant", "monkey", "gazelle", "mouse"];
     var computerSolution = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     // this creates blank array for letters to be guessed and puts the word to be guessed letters into an array
     var wordArray = [];
@@ -39,7 +39,8 @@ newGame.onclick = function () {
         }
         // runs if letter character is entered
         else {
-            userGuessText.textContent += userGuess + ", ";
+            var capitalGuess = userGuess.toUpperCase();
+            userGuessText.textContent += capitalGuess + " ";
             // subtracts one from guesses
             guesses--;
             guessLeft.textContent = guesses;
@@ -52,25 +53,24 @@ newGame.onclick = function () {
                     console.log(wordArray + "word");
                 }
             };
-           
         // conditions to determine outcome of win or loss
             if (wordArray.toString() === blankArray.toString() && guesses === 0) {
-                alert("You saved him!");
+                alert("You saved him! Click New Game to save him again.");
                 wins++;
                 winsText.textContent = wins;
             }
             else if (wordArray.toString() !== blankArray.toString() && guesses === 0) {
-                alert("He was hanged!!");
+                alert("He was hanged!! Click New Game to try again.");
                 losses++;
                 lossesText.textContent = losses;
             }
             else if (wordArray.toString() === blankArray.toString()) {
-                alert("You saved him!");
+                alert("You saved him! Click New Game to save him again.");
                 wins++;
                 winsText.textContent = wins;
             }
             else if (guesses <= 0) {
-                alert("He was hanged!!");
+                alert("He was hanged!! Click New Game to try again.");
                 losses++;
                 lossesText.textContent = losses;
             }

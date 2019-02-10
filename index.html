@@ -6,8 +6,9 @@
   <title>Word Guess Game</title>
   <!-- included jQuery Link in case -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- bootstrap link -->
+  <!-- css reset link -->
   <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <!-- bootstrap link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
   <!-- custom CSS sheet -->
@@ -18,45 +19,45 @@
   <!-- game container -->
   <div class="container">
     <!-- row 1 -->
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row row-spacing-top">
+      <div class="col-md-12 text-center">
         <h1>Animal Hangman Game</h1>
       </div>
     </div>
     <!-- row 2 -->
-    <div class="row">
-      <div class="col-md-12">
-        <button id="new-game">Click for New Word</button>
+    <div class="row row-spacing-top">
+      <div class="col-md-12 text-center middle">
+        <button type="button" class="btn btn-outline-light" id="new-game">NEW GAME</button>
       </div>
     </div>
     <!-- row 3 -->
-    <div class="row">
-      <div class="col-md-4">
-        <h3>You've guessed:</h3>
-        <!-- displays player's guesses -->
-        <p id="user-guess"></p>
-      </div>
-      <div class="col-md-4">
-        <h3>Word to guess:</h3>
-        <!-- displays the blanks to be guessed -->
-        <p id="computerchoice-text"></p>
-      </div>
-      <div class="col-md-4">
-        <h3>Guesses Left:</h3>
-        <p id="guess-left"></p>
-      </div>
-    </div>
+        <div class="row row-spacing-middle">
+          <div class="card-detail card-body text-center ">
+            <h3 class="card-title">Letters Guessed:</h3>
+            <!-- displays player's guesses -->
+            <p class="card-text" id="user-guess"></p>
+          </div>
+          <div class="card-detail card-body text-center">
+            <h3 class="card-title">Mystery Animal:</h3>
+            <!-- displays the blanks to be guessed -->
+            <p class="card-text" id="computerchoice-text"></p>
+          </div>
+          <div class="card-detail card-body text-center ">
+            <h3 class="card-title">Guesses Left:</h3>
+            <p class="card-text" id="guess-left"></p>
+          </div>
+        </div>
     <!-- row 4 -->
-    <div class="row">
-      <div class="col-md-6">
-      <!-- wins/losses code displayed  -->
-      <h4>Wins:</h4>
-      <p id="wins-text"></p>
-    </div>
-    <div class="col-md-6">
-      <h4>Losses:</h4>
-      <p id="losses-text"></p>
-    </div>
+    <div class="row row-spacing-small">
+      <div class="card-body card-detail text-center">
+        <!-- wins/losses code displayed  -->
+        <h4>Wins:</h4>
+        <p lass="card-text" id="wins-text"></p>
+      </div>
+      <div class="card-body card-detail text-center">
+        <h4>Losses:</h4>
+        <p lass="card-text" id="losses-text"></p>
+      </div>
     </div>
   </div>
   <!-- link to external js file -->

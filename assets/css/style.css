@@ -1,3 +1,33 @@
-h1{
-    float: center;
+
+body{
+    background-color: rgb(148, 206, 221); 
+}
+.row-spacing-top{
+    margin-top: 1rem;
+}
+.row-spacing-small{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: lightblue;
+    border: 1px solid gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;    
+}
+.row-spacing-middle{
+    margin-top: 2rem;
+    background-color: lightblue;
+    border: 1px solid gray;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;    
+}
+.card-detail{
+    background-color: lightgrey;
+    border: 1px solid teal;
+    margin: 0.2rem 0.5rem;
+}
+h1,h3,h4,p,button{
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+h3,h4,p,h1,#new-game{
+    color: teal;
 }
